@@ -1,0 +1,112 @@
+\chapter{Háttérismeretek} \label{ch:hatterismeretek}
+
+Hosszú út vezetett az első szoftverek megjelenésétől a generatív mesterséges intelligencia térhódításáig. Az elmúlt évtizedekben a szoftverfejlesztés területén drámai változások zajlottak le, amelyek alapjaiban formálták át a szakmát és a fejlesztési folyamatokat. A technológiai fejlődés következtében egyre összetettebb rendszerek épültek ki, amelyek kezelése és fejlesztése új megközelítéseket és eszközöket igényelt.
+
+Ebben a fejezetben összefoglalom a szakdolgozat témájához kapcsolódó háttérismereteket. A \ref{sec:szoftverfejlesztes}. alfejezetben áttekintem a szoftverfejlesztési folyamat lépéseit és fontosabb módszertanait. A \ref{sec:mi}. alfejezetben bemutatom a mesterséges intelligencia főbb területeit. Végül a \ref{sec:mi-fejl}. alfejezetben ismertetem, hogyan hat a mesterséges intelligencia a szoftverfejlesztésre.
+
+\section{Szoftverfejlesztés}\label{sec:szoftverfejlesztes}
+
+A számítógépek fejlődésével egyre bonyolultabb problémák kerültek a programozók látókörébe, hiszen a növekvő számítási kapacitás egyre több esetben volt már elegendő. Ez a potenciál nem is maradt kihasználatlanul, ami a szoftverrendszerek komplexitásának drámai növekedéséhez vezetett \parencite{Briggs02042020}. A kezdeti komplexitást jól mutatja, hogy az első elektronikusan tárolt program, amit Tom Kilburn írt 1948-ban egy szám legnagyobb valódi osztójának megkeresésére, mindössze 17 utasításból állt \parencite{lavington1998history}. Ezzel szemben a Google összes szoftverének együttes kódbázisát 2 milliárd sorosra becsülik \parencite{googlecodebase}, ami jól mutatja a robbanásszerű fejlődést.
+
+A kevesebb, mint egy évszázad alatt ilyen meredeken növekvő bonyolultságot látva nem szabad azonban szem elől tévesztenünk, hogy az emberi agy kapacitása nem változott. Vagyis a szoftveresen megoldott problémák komplexitása bőven átlépte már azt a határt, amit egy ember még részleteiben képes átlátni. Ennek a kezelését az újabb és újabb absztrakciós szintek bevezetése tette lehetővé, hiszen a magasabb absztrakciós szinteken már nem nehezítik a tisztánlátást az alacsonyabb szintek részletei. A növekvő komplexitás, és az abból következő különböző absztrakciós szintek összhangban tartása szükségessé tette strukturált fejlesztési módszertanok kidolgozását, amelyek segítségével a projektek kézben tarthatók és a csapatok hatékonyan tudnak együttműködni.
+
+\subsection{Szoftverfejlesztési életciklus}\label{subsec:sdlc}
+
+A szoftverfejlesztés során már a korai évtizedekben nyilvánvalóvá vált, hogy a növekvő komplexitás és a hatékony csapatmunka strukturált megközelítést igényel. A kezdeti spontán, ad hoc fejlesztés gyakran vezetett időbeli csúszásokhoz, költségtúllépéshez és minőségi problémákhoz. Ezek a nehézségek hívták életre a szoftverfejlesztés első modelljét (vízesésmodell), amely strukturált fázisokra bontotta a folyamatot \parencite{Royce1970ManagingDevelopment}. Később ez alapján dolgozták ki a \emph{szoftverfejlesztési életciklus} (Software Development Life Cycle, SDLC) koncepcióját, amely általános keretrendszert ad a szoftverek tervezéséhez, fejlesztéséhez, teszteléséhez és karbantartásához \parencite{Boehm1988Spiral, Sommerville2015Software}. Az SDLC célja, hogy a fejlesztés folyamata átlátható, megismételhető, hatékony és mérhető legyen, hozzájárulva ezzel ahhoz, hogy az elkészült termék végül megfeleljen a megrendelői és felhasználói elvárásoknak.
+
+A szoftverfejlesztési életciklus modellje tehát nemcsak technikai iránytű, hanem menedzsment eszköz is: közös nyelvet biztosít a szoftverfejlesztés folyamatához, elősegítve a kommunikációt a különböző szerepkörök között, támogatja a tervezést és a minőségbiztosítást, valamint csökkenti a projektkockázatokat \parencite{sdlc4ispm}. A jól definiált fázisok segítenek abban, hogy a fejlesztési folyamat logikusan épüljön fel, és minden lépésnek világos bemenetei és kimenetei legyenek. Bár az egyes szervezetek és módszertanok eltérően valósítják meg, az SDLC alapvetően a következő lépésekből áll \parencite{IBM2025SDLC}.
+
+\begin{enumerate}
+	\item \textbf{Tervezés (Planning).} Célja a projekt céljainak, hatókörének, erőforrásigényének és kockázatainak meghatározása. Ebben a szakaszban történik a projekt ütemezése és a kezdeti költségbecslés is, ami alapot ad a további fejlesztési döntésekhez. Eredménye a kezdeti szoftverkövetelmény specifikáció (Software Requirement Specification, SRS).
+	
+	\item \textbf{Elemzés (Analysis).} A fejlesztendő rendszer funkcionális és extrafunkcionális (nem funkcionális) követelményeinek összegyűjtése, elemzése és dokumentálása. A cél, hogy minden érintett fél számára egyértelmű legyen, mit kell a rendszernek teljesítenie. Eredménye a követelmények részletes dokumentációja.
+	
+	\item \textbf{Tervezés (Design).} A rendszer logikai és technikai architektúrájának kialakítása, beleértve az adatmodelleket, a komponensek közötti kapcsolatokat, interfészeket és a felhasználói felület alapvető struktúráját. Az átgondolt tervezés biztosítja, hogy az implementáció során már egyértelmű legyen, mit is kell csinálni. Eredménye a szoftverterv dokumentáció (Software Design Document, SDD).
+	
+	\item \textbf{Fejlesztés (Development).} A szoftver tényleges megvalósítása (implementálása) a korábbi fázisok során keletkezett dokumentumok alapján, vagyis a forráskód elkészítése, a komponensek integrálása és bizonyos előzetes egységtesztek végrehajtása. Eredménye a szoftver egy funkcionális (működő) prototípusa.
+	
+	\item \textbf{Tesztelés (Testing).} A fejlesztett rendszer validálása, amely során ellenőrzik, hogy az a tervezett követelményeknek megfelelően működik-e. Számos különböző módszer szolgál a hibák azonosítására, mint pl. statikus kódanalízis, code review, különböző manuális/automata tesztek (egységteszt, integrációs teszt, rendszerteszt), sérülékenységvizsgálat. A hibák azonosítása és dokumentálása után természetesen a javításuk következik, egészen addig, amíg az újratesztelés sikerrel nem jár. Eredménye egy javított, jobb minőségű (ideális esetben akár hibamentes) szoftver.
+	
+	\item \textbf{Bevezetés (Deployment).} A kész rendszer éles környezetbe helyezése, ahol már hozzáférnek a tényleges végfelhasználók. A technikai bevezetésen túl ide tartozik annak a biztosítása is, hogy a felhasználók valóban értsék, hogyan kell használniuk az új rendszert, illetve, hogy a bevezetés a lehető legkevésbé akassza meg a meglévő folyamatokat. Eredménye egy olyan szoftver, ami már a cégfelhasználók számára is elérhető.
+	
+	\item \textbf{Karbantartás (Maintenance).} A rendszer hosszú távú támogatása garantálja a szoftver folyamatos működőképességét és alkalmazkodását a változó üzleti igényekhez. Ez magában foglalja frissítések és hibajavítások biztosítását, valamint akár új funkciók fejlesztését is. Eredménye egy frissebb, javított szoftver.
+\end{enumerate}
+
+A fázisok egymásra épülnek, a különböző fejlesztési modellek azonban már eltérően értelmezhetik a fázisok közti átmeneteket. Míg a legegyszerűbb megközelítés szerint a fázisok lineárisan követik egymást, más modellek szerint iteratívan is végrehajthatók. Látható tehát, hogy az SDLC csupán testre szabható közös alapot teremt a számos különböző modell számára, amelyek így egységesen elemezhetők és összehasonlíthatók(\parencite{sdlcmethods}.
+
+\subsection{Klasszikus modellek}
+
+A szoftverfejlesztés első modellje a \textit{vízesésmodell} (\ref{fig:vizeses}. ábra, \cite{Royce1970ManagingDevelopment}), amiben a diszjunkt fázisok szigorúan szekvenciálisan követik egymást. Ez a modell egyszerű és átlátható, a fázisok közti átmenetek, valamint a be- és kimenetek egyértelműek. Fontos azonban megjegyezni, hogy a vízesésmodell nem tudja hatékonyan kezelni a követelmények utólagos változását, hiszen ekkor elölről kellene kezdeni az egész folyamatot.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth, keepaspectratio]{figures/vizeses.png}
+	\caption{A vízesésmodell lépései. \parencite{Royce1970ManagingDevelopment}}
+	\label{fig:vizeses}
+\end{figure}
+
+Noha a vízesésmodellt tekintjük az első formálisan leírt modellnek, az \textit{iteratív} megközelítés már ennél korábban is megfogalmazódott (\cite{iterative}). Ebben a szemléletben a fázisok között visszacsatolás van, vagyis a rendszer több iteráció során válik egyre részletesebbé, míg el nem nyeri végleges formáját. (Valójában \textcite{Royce1970ManagingDevelopment} már a vízesésmodellt bemutató cikkében is írt visszacsatolásról (\textit{,,do it twice''}), de ez a modell mégis szigorúan szekvenciálissá egyszerűsítve terjedt el.)
+
+A szekvenciális és iteratív megközelítések ötvözéséből született meg a \textit{spirálmodell}, amely iteratív ciklusokban dolgozik és külön hangsúlyt fektet a kockázatelemzésre minden egyes fázisban (\ref{fig:spiral}. ábra, \cite{Boehm1988Spiral}). A spirálban minden „gyűrű” egy újabb fejlesztési ciklust jelöl, amiben célokat határoznak meg, értékelik a rizikófaktorokat, prototípusokat fejlesztenek, majd megtervezik a következő ciklust. Ez a modell különösen olyan összetett projektekben alkalmazható, ahol a követelmények gyakran változnak, vagy magas a kockázat.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth, keepaspectratio]{figures/spiral.png}
+	\caption{A spirálmodell lépései. \parencite{Boehm1988Spiral}}
+	\label{fig:spiral}
+\end{figure}
+
+A vízesésmodell továbbfejlesztése a \textit{V-modell} (\ref{fig:vizeses}. ábra, \cite{Rook1986VModel}), amelyben különös hangsúlyt kap a tesztelés, hiszen minden fejlesztési szinthez kapcsolódik egy tesztelési fázis is. A V bal szára az egyre részletesebb tervezési lépésekből áll (top-down), amiket alul a tényleges implementáció követ. A V jobb szára pedig az egyre magasabb szintű validációs fázisokat tartalmazza (bottom-up). Előnye, hogy az egyes fejlesztési lépésekkel párhuzamosan tervezhetők a kapcsolódó tesztek, ugyanakkor nem elég rugalmas ahhoz, hogy kezelni tudja a változó követelményeket.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth, keepaspectratio]{figures/vmodel.png}
+	\caption{A V-modell lépései. (\textcite{Boehm1988Spiral} ábrája feljavított minőségben, saját szerkesztés.)}
+	\label{fig:vmodel}
+\end{figure}
+
+\subsection{Agilis módszertanok}\label{subsec:agilis}
+
+A klasszikus, szekvenciális fejlesztési modellek (például a vízesés- és a V-modell) jól strukturáltak, de a gyakorlatban gyakran bizonyultak túlságosan merevnek a gyorsan változó üzleti és technológiai környezetben. A követelmények ritkán maradnak változatlanok egy teljes projektidőszakon át, és a felhasználói igények sokszor csak a fejlesztés előrehaladtával tisztulnak ki. Ezt a problémát a korai modellek nehezen tudták kezelni, mivel a folyamat lineáris jellege miatt egy későbbi fázisban felmerülő változás az egész fejlesztési ciklust visszavethette. Ebből a felismerésből született meg az \emph{agilis szoftverfejlesztés} gondolata, amely a rugalmasságot, az iterativitást és a folyamatos visszacsatolást helyezi a középpontba \parencite{Beck2001AgileManifesto,Highsmith2002Agile}.
+
+Az agilis szemlélet 2001-ben vált formálisan meghatározottá, amikor 17 szoftverfejlesztő megfogalmazta az \emph{Agile Manifestót} (\textit{Manifesto for Agile Software Development}, \cite{Beck2001AgileManifesto}). A dokumentum négy alapértéket és tizenkét elvet rögzít, amelyek célja a fejlesztés emberközpontúbbá, együttműködőbbé és gyorsabban reagálóvá tétele. A négy alapérték a következő:
+\begin{itemize}
+	\item az \textbf{egyének és interakciók} fontosabbak, mint a folyamatok és eszközök,
+	\item a \textbf{működő szoftver} fontosabb, mint az átfogó dokumentáció,
+	\item a \textbf{megrendelővel való együttműködés} fontosabb, mint a szerződéses tárgyalás,
+	\item a \textbf{változásra való reagálás} fontosabb, mint a terv követése.
+\end{itemize}
+Ezek az elvek nem a dokumentáció vagy a tervezés elhagyását jelentik, hanem azoknak az emberi tényezők és a gyors visszacsatolás mögé rendelését. Az agilitás tehát nem a folyamatok hiányát, hanem azok ésszerű minimalizálását és adaptivitását jelenti.
+
+Az agilis módszertanok közül a legismertebb a \textit{Scrum}, amely iteratív fejlesztési ciklusokat (ún. sprinteket) alkalmaz, jellemzően 2–4 hetes időtartamban. Minden sprint végén egy működő szoftververzió (inkrementum) kerül bemutatásra, amelyet a csapat retrospektív megbeszélésen értékel, így a következő iterációban azonnal érvényesíthetők a tapasztalatok \parencite{Schwaber1997ScrumGuide}.
+
+A \textit{Kanban} módszer ezzel szemben a feladatok folyamatos elvégzésére és a vizuális feladatkövetésre épít: a munkaelemek egy táblán haladnak végig a „to do” – „in progress” – „done” állapotokon, elősegítve az átláthatóságot és a szűk keresztmetszetek felismerését \parencite{Anderson2010Kanban}.
+
+Az \textit{Extreme Programming} (XP) a kódminőség és a fejlesztői gyakorlatok javítását helyezi előtérbe, például páros programozással, tesztvezérelt fejlesztéssel (Test Driven Development, TDD) valamint folyamatos integrációval és folyamatos szállítással (Continuous Integration / Continuous Delivery, CI/CD) \parencite{Beck2004XP}.
+
+Az agilis módszertanok nem önmagukban állnak, hanem az SDLC iteratív megvalósításai: az életciklus fázisai itt nem szigorú sorrendben követik egymást, hanem folyamatosan ismétlődnek kisebb körökben. A hangsúly a folyamatos értékteremtésen, a csapat autonómiáján és a visszajelzések gyors beépítésén van. Ennek köszönhetően az agilis fejlesztés különösen jól illeszkedik a gyorsan változó üzleti környezethez és a modern technológiai ökoszisztémákhoz.
+
+\subsection{Automatizációs trendek}\label{subsec:automatizacio}
+
+Az agilis fejlesztés térnyerésével párhuzamosan a szoftverfejlesztésben megjelent egy új szemlélet, amely a fejlesztési és üzemeltetési tevékenységek szoros integrációjára épül: ez a \textit{DevOps}. A kifejezés a \textit{Development} és \textit{Operations} szavak összevonásából származik, és egy olyan kulturális és technológiai megközelítést takar, amely az együttműködést, az automatizációt és a folyamatos visszajelzést helyezi előtérbe \parencite{Humble2010ContinuousDelivery,Kim2016DevOpsHandbook}. A DevOps célja, hogy megszüntesse a fejlesztői és az üzemeltetési csapatok közti hagyományos szakadékot, ezáltal gyorsabb, megbízhatóbb és skálázhatóbb szoftverszállítást tegyen lehetővé.
+
+A DevOps egyik legfontosabb alapelve a \textit{folyamatos integráció és folyamatos szállítás} (CI/CD), amely az automatizációs eszközök segítségével biztosítja, hogy a kódmódosítások rendszeresen, automatizált módon épüljenek be a központi kódbázisba, majd tesztelés után akár éles környezetbe is kerülhessenek \parencite{Fowler2006CI}. Az automatizált build- és tesztfolyamatokat gyakran olyan eszközök valósítják meg, mint a \textit{Jenkins}\footnote{\url{https://www.jenkins.io/}}, a \textit{GitLab CI/CD}\footnote{\url{https://about.gitlab.com/stages-devops-lifecycle/continuous-integration/}} vagy a \textit{GitHub Actions}\footnote{\url{https://github.com/features/actions}}, amelyek lehetővé teszik a pipeline-ok vizuális konfigurálását, a verziókezeléssel való integrációt és a különböző környezetekbe történő automatikus telepítést.
+
+A konténerizáció és az infrastruktúra automatizálása szintén kulcsszerepet játszanak a modern DevOps-gyakorlatban. A \textit{Docker}\footnote{\url{https://www.docker.com/}} a fejlesztők számára biztosít egységes futtatási környezetet, amely minimalizálja a „works on my machine” típusú hibákat, míg a \textit{Kubernetes}\footnote{\url{https://kubernetes.io/}} a konténerizált alkalmazások automatikus ütemezését, skálázását és monitorozását végzi el \parencite{Hightower2019Kubernetes}. Az infrastruktúra leírását kód formájában (Infrastructure as Code, IaC) olyan eszközök támogatják, mint a \textit{Terraform}\footnote{\url{https://www.terraform.io/}} és az \textit{Ansible}\footnote{\url{https://www.ansible.com/}}, amelyek deklaratív módon teszik lehetővé a rendszerek konfigurációját és újrakonstruálását \parencite{Brikman2022Terraform}. Ezek az automatizációs trendek együttesen nemcsak a fejlesztés sebességét növelik, hanem hozzájárulnak a hibák korai felismeréséhez, a rendszerek megbízhatóságának növeléséhez és a \textit{folyamatos fejlesztési ciklus} (Continuous Improvement) megvalósításához.
+
+Összességében a DevOps és a CI/CD megközelítések az agilis elvek technológiai kiterjesztései, amelyek a gyors alkalmazkodást és a folyamatos értékteremtést támogatják. Az automatizáció ma már nem csupán kényelmi eszköz, hanem versenyképességi tényező a vállalati szoftverfejlesztésben, különösen a komplex rendszerek és a felhőalapú architektúrák korában.
+
+\subsection{Low-code, no-code paradigma}\label{subsec:lowcode}
+
+A szoftverfejlesztés folyamatosan az automatizáció irányába mozdul el: a DevOps- és CI/CD-megközelítések az üzemeltetés és a szállítás folyamatát egyszerűsítik, míg a legújabb trendek magát a fejlesztési munkát is igyekeznek automatizálni. Ennek egyik legfontosabb irányzata a \textit{low-code} és \textit{no-code} paradigma, amelynek célja, hogy a fejlesztők – vagy akár fejlesztői háttérrel nem rendelkező üzleti felhasználók – vizuális, deklaratív eszközök segítségével hozhassanak létre alkalmazásokat \parencite{Richardson2014LowCode}. A \textit{low-code} megközelítés még igényel bizonyos mértékű programozói tevékenységet, míg a \textit{no-code} platformok teljesen grafikus, drag-and-drop alapú környezetet biztosítanak.
+
+A low-code platformok tipikusan előre definiált komponenseket, adatkapcsolatokat és felhasználói felületi elemeket kínálnak, amelyekből gyorsan összeállíthatók alkalmazások. Az ilyen környezetek célja a fejlesztés felgyorsítása, a hibák csökkentése és az üzleti oldalon jelentkező igények gyorsabb kielégítése. Az olyan megoldások, mint az \textit{OutSystems}\footnote{\url{https://www.outsystems.com/}}, a \textit{Mendix}\footnote{\url{https://www.mendix.com/}} vagy a \textit{Microsoft Power Apps}\footnote{\url{https://powerapps.microsoft.com/}}, jól példázzák ezt a tendenciát: mindhárom platform lehetővé teszi alkalmazások gyors prototípusának elkészítését, adatkapcsolatok beállítását, valamint integrációt külső rendszerekkel. A no-code megközelítés ezt továbbviszi azáltal, hogy fejlesztői tudás nélkül is használható környezetet kínál, ilyen például a \textit{Bubble}\footnote{\url{https://bubble.io/}} vagy a \textit{Google AppSheet}\footnote{\url{https://www.appsheet.com/}}.
+
+A low-code és no-code rendszerek jelentősége a vállalati környezetben folyamatosan növekszik, különösen ott, ahol az informatikai osztályok kapacitása korlátozott, de az üzleti igények gyors megvalósítást követelnek. Bár ezek a platformok nem alkalmasak minden fejlesztési feladatra, hatékonyan kiegészítik a hagyományos fejlesztést: lehetővé teszik az egyszerűbb alkalmazások és belső eszközök gyors előállítását, így a fejlesztők nagyobb figyelmet fordíthatnak az összetettebb problémákra. A low-code/no-code irányzat ezért a szoftverfejlesztés demokratizálásának egyik kulcstényezője, és előkészíti a terepet a generatív mesterséges intelligencián alapuló kódgenerátorok által támogatott fejlesztési megoldások számára \parencite{Gartner2023LCNC}.
+
+\section{Mesterséges intelligencia}\label{sec:mi}
+
+
+
+\section{Mesterséges intelligencia a szoftverfejlesztésben}\label{sec:mi-fejl}
+

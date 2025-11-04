@@ -1,0 +1,75 @@
+% !TeX spellcheck = hu_HU
+% !TeX encoding = UTF-8
+% !TeX program = xelatex
+\documentclass[11pt,a4paper,oneside]{report}             % Single-side
+%\documentclass[11pt,a4paper,twoside,openright]{report}  % Duplex
+
+\input{include/packages}
+
+\newcommand{\vikcim}{A generatív mesterséges intelligencia szerepe és használatának kihívásai a nagyvállalati szoftverfejlesztésben} % Cím
+\newcommand{\vikdoktipus}{\bsc} % Dokumentum típusa (\bsc vagy \msc)
+
+\newcommand{\vikszerzoVezeteknev}{Szkupien}
+\newcommand{\vikszerzoKeresztnev}{Péter}
+
+\newcommand{\vikkonzulensAMegszolitas}{dr.~}
+\newcommand{\vikkonzulensAVezeteknev}{Drótos}
+\newcommand{\vikkonzulensAKeresztnev}{György}
+
+\newcommand{\vikkonzulensBMegszolitas}{}
+\newcommand{\vikkonzulensBVezeteknev}{}
+\newcommand{\vikkonzulensBKeresztnev}{}
+
+\newcommand{\vikkonzulensCMegszolitas}{}
+\newcommand{\vikkonzulensCVezeteknev}{}
+\newcommand{\vikkonzulensCKeresztnev}{}
+
+\newcommand{\szerzoMeta}{\vikszerzoVezeteknev{} \vikszerzoKeresztnev} % egy szerző esetén
+
+% Beállítások magyar nyelvű dolgozathoz
+\input{include/thesis-hu}
+
+\input{include/preamble}
+
+% Table of contents and the main text
+\begin{document}
+
+\pagenumbering{gobble}
+
+\selectthesislanguage
+
+%Titlepage
+\include{include/titlepage}
+
+\pagenumbering{roman}
+
+% Table of Contents
+\tableofcontents%\cleardoublepage
+
+% List of Figures, Tables
+\listoffigures\addcontentsline{toc}{chapter}{\listfigurename}\cleardoublepage
+
+% The main part of the thesis
+\pagenumbering{arabic}
+
+% Own content
+\include{content/bevezetes}
+\include{content/hatterismeretek}
+\include{content/kutatasmodszertan}
+\include{content/eredmenyek}
+\include{content/kovetkeztetesek}
+\include{content/osszegzes}
+
+% Acknowledgements
+\include{content/acknowledgement}
+
+% Bibliography
+%\bibliography{bib/mybib}
+%\printbibliography[heading=bibintoc,title={\bibname}]
+
+%\addcontentsline{toc}{chapter}{Irodalomjegyzék}
+\printbibliography[heading=bibintoc, title={Irodalomjegyzék}]
+
+
+
+\end{document}
