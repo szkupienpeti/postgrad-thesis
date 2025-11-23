@@ -1,8 +1,8 @@
-\chapter{Háttérismeretek} \label{ch:hatterismeretek}
+\chapter{Elméleti áttekintés} \label{ch:hatterismeretek}
 
 Hosszú út vezetett az első szoftverek megjelenésétől a generatív mesterséges intelligencia térhódításáig. Az elmúlt évtizedekben a szoftverfejlesztés területén drámai változások zajlottak le, amelyek alapjaiban formálták át a szakmát és a fejlesztési folyamatokat. A technológiai fejlődés következtében egyre összetettebb rendszerek épültek ki, amelyek kezelése és fejlesztése új megközelítéseket és eszközöket igényelt.
 
-Ebben a fejezetben összefoglalom a szakdolgozat témájához kapcsolódó háttérismereteket. A \ref{sec:szoftverfejlesztes}. alfejezetben áttekintem a szoftverfejlesztési folyamat lépéseit és fontosabb módszertanait. A \ref{sec:mi}. alfejezetben bemutatom a mesterséges intelligencia főbb területeit. Végül a \ref{sec:mi-fejl}. alfejezetben ismertetem, hogyan hat a mesterséges intelligencia a szoftverfejlesztésre.
+Ebben a fejezetben összefoglalom a szakdolgozat témájához kapcsolódó elméleti ismereteket. A \ref{sec:szoftverfejlesztes}. alfejezetben áttekintem a szoftverfejlesztési folyamat lépéseit és fontosabb módszertanait. A \ref{sec:mi}. alfejezetben bemutatom a mesterséges intelligencia főbb területeit. Végül a \ref{sec:mi-fejl}. alfejezetben ismertetem, hogyan hat a mesterséges intelligencia a szoftverfejlesztésre.
 
 \section{Szoftverfejlesztés}\label{sec:szoftverfejlesztes}
 
@@ -17,11 +17,11 @@ A szoftverfejlesztés során már a korai évtizedekben nyilvánvalóvá vált, 
 A szoftverfejlesztési életciklus modellje tehát nemcsak technikai iránytű, hanem menedzsment eszköz is: közös nyelvet biztosít a szoftverfejlesztés folyamatához, elősegítve a kommunikációt a különböző szerepkörök között, támogatja a tervezést és a minőségbiztosítást, valamint csökkenti a projektkockázatokat \parencite{sdlc4ispm}. A jól definiált fázisok segítenek abban, hogy a fejlesztési folyamat logikusan épüljön fel, és minden lépésnek világos bemenetei és kimenetei legyenek. Bár az egyes szervezetek és módszertanok eltérően valósítják meg, az SDLC alapvetően a következő lépésekből áll \parencite{IBM2025SDLC}.
 
 \begin{enumerate}
-	\item \textbf{Tervezés (Planning).} Célja a projekt céljainak, hatókörének, erőforrásigényének és kockázatainak meghatározása. Ebben a szakaszban történik a projekt ütemezése és a kezdeti költségbecslés is, ami alapot ad a további fejlesztési döntésekhez. Eredménye a kezdeti szoftverkövetelmény specifikáció (Software Requirement Specification, SRS).
+	\item \textbf{Projekttervezés (Planning).} Célja a projekt céljainak, hatókörének, erőforrásigényének és kockázatainak meghatározása. Ebben a szakaszban történik a projekt ütemezése és a kezdeti költségbecslés is, ami alapot ad a további fejlesztési döntésekhez. Eredménye a kezdeti szoftverkövetelmény specifikáció (Software Requirement Specification, SRS).
 	
 	\item \textbf{Elemzés (Analysis).} A fejlesztendő rendszer funkcionális és extrafunkcionális (nem funkcionális) követelményeinek összegyűjtése, elemzése és dokumentálása. A cél, hogy minden érintett fél számára egyértelmű legyen, mit kell a rendszernek teljesítenie. Eredménye a követelmények részletes dokumentációja.
 	
-	\item \textbf{Tervezés (Design).} A rendszer logikai és technikai architektúrájának kialakítása, beleértve az adatmodelleket, a komponensek közötti kapcsolatokat, interfészeket és a felhasználói felület alapvető struktúráját. Az átgondolt tervezés biztosítja, hogy az implementáció során már egyértelmű legyen, mit is kell csinálni. Eredménye a szoftverterv dokumentáció (Software Design Document, SDD).
+	\item \textbf{Rendszertervezés (Design).} A rendszer logikai és technikai architektúrájának kialakítása, beleértve az adatmodelleket, a komponensek közötti kapcsolatokat, interfészeket és a felhasználói felület alapvető struktúráját. Az átgondolt tervezés biztosítja, hogy az implementáció során már egyértelmű legyen, mit is kell csinálni. Eredménye a szoftverterv dokumentáció (Software Design Document, SDD).
 	
 	\item \textbf{Fejlesztés (Development).} A szoftver tényleges megvalósítása (implementálása) a korábbi fázisok során keletkezett dokumentumok alapján, vagyis a forráskód elkészítése, a komponensek integrálása és bizonyos előzetes egységtesztek végrehajtása. Eredménye a szoftver egy funkcionális (működő) prototípusa.
 	
@@ -32,7 +32,7 @@ A szoftverfejlesztési életciklus modellje tehát nemcsak technikai iránytű, 
 	\item \textbf{Karbantartás (Maintenance).} A rendszer hosszú távú támogatása garantálja a szoftver folyamatos működőképességét és alkalmazkodását a változó üzleti igényekhez. Ez magában foglalja frissítések és hibajavítások biztosítását, valamint akár új funkciók fejlesztését is. Eredménye egy frissebb, javított szoftver.
 \end{enumerate}
 
-A fázisok egymásra épülnek, a különböző fejlesztési modellek azonban már eltérően értelmezhetik a fázisok közti átmeneteket. Míg a legegyszerűbb megközelítés szerint a fázisok lineárisan követik egymást, más modellek szerint iteratívan is végrehajthatók. Látható tehát, hogy az SDLC csupán testre szabható közös alapot teremt a számos különböző modell számára, amelyek így egységesen elemezhetők és összehasonlíthatók(\parencite{sdlcmethods}.
+A fázisok egymásra épülnek, a különböző fejlesztési modellek azonban már eltérően értelmezhetik a fázisok közti átmeneteket. Míg a legegyszerűbb megközelítés szerint a fázisok lineárisan követik egymást, más modellek szerint iteratívan is végrehajthatók. Látható tehát, hogy az SDLC csupán testre szabható közös alapot teremt a számos különböző modell számára, amelyek így egységesen elemezhetők és összehasonlíthatók \parencite{sdlcmethods}.
 
 \subsection{Klasszikus modellek}
 
@@ -82,7 +82,7 @@ Az agilis módszertanok közül a legismertebb a \textit{Scrum}, amely iteratív
 
 A \textit{Kanban} módszer ezzel szemben a feladatok folyamatos elvégzésére és a vizuális feladatkövetésre épít: a munkaelemek egy táblán haladnak végig a „to do” – „in progress” – „done” állapotokon, elősegítve az átláthatóságot és a szűk keresztmetszetek felismerését \parencite{Anderson2010Kanban}.
 
-Az \textit{Extreme Programming} (XP) a kódminőség és a fejlesztői gyakorlatok javítását helyezi előtérbe, például páros programozással, tesztvezérelt fejlesztéssel (Test Driven Development, TDD) valamint folyamatos integrációval és folyamatos szállítással (Continuous Integration / Continuous Delivery, CI/CD) \parencite{Beck2004XP}.
+Az \textit{Extreme Programming} (XP) a kódminőség és a fejlesztői gyakorlatok javítását helyezi előtérbe, például páros programozással (pair programming), tesztvezérelt fejlesztéssel (Test Driven Development, TDD) valamint folyamatos integrációval és folyamatos szállítással (Continuous Integration / Continuous Delivery, CI/CD) \parencite{Beck2004XP}.
 
 Az agilis módszertanok nem önmagukban állnak, hanem az SDLC iteratív megvalósításai: az életciklus fázisai itt nem szigorú sorrendben követik egymást, hanem folyamatosan ismétlődnek kisebb körökben. A hangsúly a folyamatos értékteremtésen, a csapat autonómiáján és a visszajelzések gyors beépítésén van. Ennek köszönhetően az agilis fejlesztés különösen jól illeszkedik a gyorsan változó üzleti környezethez és a modern technológiai ökoszisztémákhoz.
 
@@ -106,7 +106,183 @@ A low-code és no-code rendszerek jelentősége a vállalati környezetben folya
 
 \section{Mesterséges intelligencia}\label{sec:mi}
 
+A \textit{mesterséges intelligencia} (MI, artificial intelligence, AI) fogalma eltér a köznyelvben és a tudományos diskurzusban. A hétköznapi kommunikációban az MI gyakran bármilyen automatizált vagy „okos” működésű rendszert jelöl – például egy alkalmazást, egy chatbotot vagy egy autóban működő navigációs rendszert. A tudományos definíciók ezzel szemben szűkebbek és pontosabbak: mesterséges intelligenciának azokat a számítógépes rendszereket tekintjük, amelyek képesek olyan kognitív funkciókat utánzó műveletekre, mint az érvelés, a tanulás, az érzékelés vagy a döntéshozatal \parencite{RussellNorvig2021AI}.  
 
+A definíció tisztázatlansága régóta problémát jelent az információrendszerek kutatásában is. Egy 2005 és 2020 között megjelent cikkeket feldolgozó szisztematikus irodalomáttekintés szerint a mesterséges intelligencia kifejezést az információrendszerek szakirodalma sokszor homályosan használja, és a kutatások egy része nem tesz különbséget az MI, a gépi tanulás és az adatelemzés között \parencite{Collins2021AIinIS}. A szerzők szerint a jövőbeni kutatások egyik kulcsfeladata az MI pontos fogalmi kereteinek meghatározása, hogy az empirikus vizsgálatok jobban összehasonlíthatók legyenek.
+
+\subsection{Történeti áttekintés}\label{subsec:mitortenelem}
+
+A mesterséges intelligencia története szorosan összefonódik a számítástechnika fejlődésével. Az MI kifejezést először \textcite{McCarthy1955Proposal} használta a híres Dartmouth-konferencián, ahol a kutatók célul tűzték ki az „intelligens gépek” megalkotását. Az 1950-es és 1960-as években az MI kutatásokat a \textit{szimbolikus, szabályalapú rendszerek} uralták: az olyan korai projektek, mint az \textit{ELIZA} \parencite{Weizenbaum1966ELIZA} vagy a \textit{SHRDLU} \parencite{Winograd1972SHRDLU} egyszerű természetesnyelv-feldolgozási feladatokat oldottak meg szabályrendszerek segítségével.
+
+A hetvenes évek közepétől az úgynevezett \textit{MI-tél} (AI winter) időszaka következett, mivel a technológiai korlátok és a túlzott várakozások miatt a kutatások lassultak. Az 1980-as években a \textit{szakértői rendszerek} (expert systems) jelentették az új áttörést, amelyek például az orvosi diagnosztikában vagy az ipari hibadetektálásban használták a mesterséges intelligenciát \parencite{Feigenbaum1981ExpertSystems}. A \textit{gépi tanulás} (machine learning) koncepciója ekkor kezdett erősödni, de a valódi forradalom a 2010-es években következett be, amikor a nagy mennyiségű adat (Big Data), a megnövekedett számítási teljesítmény és a grafikus processzorok (GPU-k) elérhetősége lehetővé tette a \textit{mélytanulás} (deep learning) gyakorlati alkalmazását.
+
+A 2010-es évektől a mesterséges intelligencia a mindennapi technológiák részévé vált. A Google, az Amazon és a Microsoft felhőalapú MI-szolgáltatásokat kínál, miközben az önvezető járművek, az orvosi diagnosztikai rendszerek és a pénzügyi döntéstámogató algoritmusok is mind mesterséges intelligencián alapulnak. A ChatGPT\footnote{\url{https://chatgpt.com/}} és más \textit{nagy nyelvi modellek} (Large Language Models, LLM) megjelenése a 2020-as évek elején újabb paradigmaváltást hozott, amelyet már sokan a \textit{generatív mesterséges intelligencia} korszakának neveznek \parencite{Cao2023AIGC}. Ezt a fejlődési ívet ma az \textit{agentic AI} irányzat folytatja, amelynek célja, hogy a mesterséges intelligencia ne csupán tartalmat generáljon, hanem autonóm módon képes legyen döntéseket hozni és tevékenységeket végrehajtani \parencite{AgenticAI}.
+
+\subsection{Főbb irányok}\label{subsec:mifobbiranyok}
+
+A mesterséges intelligencia története során több irányzat különíthető el, amelyek részben egymást részben kiegészítve, részben felváltva dominálták a kutatást és a gyakorlati alkalmazásokat.
+
+\paragraph{Szimbolikus mesterséges intelligencia (Good Old-Fashioned AI).}
+A szimbolikus MI, más néven „klasszikus” vagy „Good Old-Fashioned AI” (GOFAI), logikai szabályok és explicit tudásreprezentációk alapján működik. A rendszerek előre definiált tudásbázisokra és következtetési szabályokra épülnek. A megközelítés előnye, hogy a döntéshozatal átlátható és magyarázható, hátránya viszont a korlátozott tanulási képesség és a nagymértékű manuális tudásbevitel igénye \parencite{NewellSimon1976PhysicalSymbolSystem}.  
+
+\paragraph{Gépi tanulás (Machine Learning).}
+A gépi tanulás a mesterséges intelligencia egyik legfontosabb alterülete, amelyben a rendszerek adatmintákból, nem pedig előre programozott szabályokból tanulnak. Ezzel a módszerrel kiváltható, hogy embereknek kelljen explicit leírni komplex szabályrendszereket, ehelyett az MI ,,magától'' képes megtanulni az adatok mögötti összefüggéseket. A gépi tanulás három fő kategóriája: a felügyelt (supervised), a nem felügyelt (unsupervised) és a megerősítéses (reinforcement) tanulás. A leggyakrabban alkalmazott technikák közé tartoznak a döntési fák, a támogatott vektorgépek (Support Vector Machine, SVM), a neurális hálók és a Bayes-féle modellek \parencite{Mitchell1997ML}.
+
+\paragraph{Mélytanulás (Deep Learning).}
+A mélytanulás a neurális hálózatok többrétegű architektúráira épül, amelyek képesek hierarchikus jellemzők automatikus kinyerésére az adatokból. Ezzel a módszerrel jelentős áttörést sikerült elérni a gépi látás, a beszédfelismerés és a természetesnyelv-feldolgozás (natural Language Processing, NLP) területén. A mélytanulás különösen hatékony, ha nagy mennyiségű címkézett adat és nagy számítási kapacitás áll rendelkezésre \parencite{LeCun2015DeepLearning}.
+
+\paragraph{Generatív mesterséges intelligencia.}
+A generatív MI (GMI) az utóbbi évek legjelentősebb innovációs irányzata, amely képes új tartalmak – például szöveg, kép, zene vagy programkód – előállítására a tanulási adatok mintázatai alapján. A generatív modellek legismertebb típusai a generatív adverszárius hálók (GAN), a variációs autoenkóderek (Variational Autoencoder, VAE) és a transzformer alapú nagy nyelvi modellek (Large Language Model, LLM) \parencite{BanhStrobel2023GenerativeAI,Cao2023AIGC}.
+Ezek az architektúrák nemcsak mintákat ismernek fel, hanem képesek új, koherens és kontextushoz illeszkedő kimeneteket előállítani. A legmodernebb modellek már több százmilliárd paraméterrel rendelkeznek, és bizonyos feladatokban képesek megközelíteni az emberi szintű teljesítményt \parencite{Hadi2024LLMReview}.
+
+\paragraph{Agentikus mesterséges intelligencia.}
+Az agentikus MI (agentic AI) egy feltörekvő paradigma, amelyben az MI-t már nem is puszta tartalom-előállításra (mint a generatív MI-t), hanem autonóm cselekvésre használják. Az MI ágensek előre definiált feladatokat teljesítenek önállóan (vagy minimális emberi felügyelettel). Működésük alapja a tervezési (planning) és következtetési (reasoning) képesség, amelyhez gyakran nagy nyelvi modelleket (LLM) használnak. Az agentikus rendszerek képesek egy komplex feladatot lépésekre bontani, külső eszközöket használni információgyűjtésre vagy műveletek végrehajtására, és a visszajelzésekből tanulva dinamikusan adaptálódni a változó körülményekhez \parencite{AgenticAI}. Ez a megközelítés megkísérli még közelebb vinni az MI rendszerek működését az emberi cselekvéshez: az MI reaktív eszközből proaktív szereplővé válik.
+
+\subsection{Erősségek, korlátok és kockázatok}\label{subsec:mikorl}
+
+A mesterséges intelligencia legnagyobb ereje az adatokból való tanulás képessége: az MI-rendszerek hatalmas adathalmazokban is képesek felfedezni rejtett mintázatokat, amelyek emberi elemzők számára láthatatlanok maradnának. Ugyanakkor az MI megbízhatósága nagymértékben függ az adatok mennyiségétől és minőségétől – ha az adathalmazok torzítottak, az algoritmusok is torz eredményeket fognak produkálni \parencite{Mehrabi2021BiasFairness}.
+
+A technológia másik komoly korlátja az \textit{állapottér-robbanás} (state space explosion), ami azt jelenti, hogy a lehetséges megoldási kombinációk száma exponenciálisan növekszik a bemeneti paraméterek számával. Emiatt a legtöbb MI-modell nem képes garantálni a globálisan optimális megoldást, hanem heurisztikus, közelítő stratégiákat alkalmaz, lokális optimumokat adva eredményül. A mély neurális hálók további nehézsége a tesztelhetőség és a helyességbizonyítás kérdése: mivel a döntéshozatal a belső súlyok millióin alapul, a rendszerek gyakorlatilag „feketedobozként” működnek, azaz nem tudhatjuk pontosan, miért az adott eredményt adja \parencite{Raji2022TestingAI}.
+
+Az MI bevezetése adatvédelmi és etikai kockázatokat is hordoz. A nagy nyelvi modellek például képesek lehetnek privát információk tárolására vagy visszaidézésére, ami adatszivárgási veszélyt jelenthet. További problémát okoz, hogy az algoritmusok gyakran nem adnak lehetőséget a felhasználói kontrollra vagy az „értesítés és választás” alapelv érvényesítésére, ami adatvédelmi jogi aggályokat vet fel \parencite{Plant2022Privacy}.  
+
+A vállalati környezetben különösen fontos a \textit{responsible AI} (felelős mesterséges intelligencia) elveinek betartása, ideértve a modellek átláthatóságát, auditálhatóságát és az emberi döntéshozatal fenntartását kritikus folyamatokban \parencite{Floridi2019Unified}. 
+Noha a mesterséges intelligencia rendszerek képesek önálló döntéseket hozni és javaslatokat generálni, a felelősség végső soron mindig az emberi felhasználót terheli. A vállalatoknak ezért egyértelmű felelősségi kereteket kell kialakítaniuk az MI-alkalmazások használatakor, hogy világos legyen, ki viseli a következményeket egy hibás döntés, félrevezető javaslat vagy adatkezelési incidens esetén. Az MI tehát nem váltja ki az emberi felelősséget, csak a formáját változtatja meg: a technológiai döntések etikai és jogi következményeit továbbra is az emberi szereplőknek kell viselniük.
+
+Az MI hosszú távú hatásait tekintve több kutató felveti az emberi kompetenciák fokozatos eróziójának kockázatát is. Ha a szakemberek mindennapi munkájukban egyre inkább az MI-re támaszkodnak, fennáll a veszélye, hogy a döntéshozatal és a problémamegoldás képessége fokozatosan csökken \parencite{soc15010006}. Ugyanakkor az MI nem az ember helyettesítője, hanem eszköze lehet: a legnagyobb potenciál a hibrid rendszerekben rejlik, ahol az emberi intuíció és a mesterséges analitika egymást erősítve működik együtt \parencite{HumanAI}.
 
 \section{Mesterséges intelligencia a szoftverfejlesztésben}\label{sec:mi-fejl}
 
+A szoftverfejlesztés komplex mérnöki feladat, ahol a siker nemcsak technikai tudáson, hanem kreativitáson, együttműködésen és folyamatos tanuláson is múlik. Mivel a fejlesztés specifikus szaktudást igénylő tevékenység, költségei is magasak, így a hatékonyság növelésének kérdése gyakorlatilag egyidős magával a szoftverfejlesztéssel. A különböző fejlesztési módszertanok, programnyelvek, integrált fejlesztői környezetek és automatizációs megoldások mind ugyanazt a célt szolgálták: rövidebb idő alatt, vagyis hatékonyabban és alacsonyabb költségen lehessen egyre komplexebb szoftvereket létrehozni, egyre magasabb minőségben.
+
+A mesterséges intelligencia megjelenése új fejezetet nyitott ebben a folyamatban. Az MI széleskörű alkalmazhatósága miatt gyakorlatilag a szoftverfejlesztési életciklus minden szakaszában képes értéket teremteni, a követelményfeltárástól kezdve a kódoláson, tesztelésen és dokumentáláson át egészen az üzemeltetésig \parencite{IBM2025AIinSD}. Az MI-alapú eszközök ma már nemcsak kiegészítő segédeszközök, hanem a fejlesztési folyamat integrált (sőt, gyakran elengedhetetlen) részei, amelyek az emberi tudást és tapasztalatot kiegészítve támogatják a fejlesztést.
+
+\subsection{Nemgeneratív mesterséges intelligencia a szoftverfejlesztésben}
+
+A mesterséges intelligencia már a generatív modellek megjelenése előtt is fontos szerepet játszott a szoftverfejlesztésben. Már a 2000-es évek elejétől kezdve alkalmaztak gépi tanulási és adatbányászati módszereket a hibák előrejelzésére, a kódminőség javítására, valamint a tesztelés és üzemeltetés automatizálására. Ezeket a megoldásokat nem tekintjük „generatívnak”, hiszen nem új kódot vagy szöveget hoznak létre, hanem elemzéssel, előrejelzéssel vagy döntéstámogatással támogatják a fejlesztési folyamatot.
+
+Ez az alfejezet csupán néhány jellegzetes felhasználási módot mutat be példaként az SDLC különböző fázisaiból, ez a felsorolás azonban semmiképpen sem tekinthető szisztematikus áttekintésnek. A bemutatott felhasználási módokat a \ref{tab:nemgenai-sdlc-tools}. táblázat foglalja össze.
+
+\paragraph{Fejlesztési időtartam előrejelzése.}
+A projektmenedzsment folyamatokban az MI-t gyakran használják becslésre.  
+A gépi tanulási modellek képesek korábbi projektadatokból (pl. story pointok, commit mennyiség, csapatteljesítmény) tanulni, és ezek alapján előrejelezni a jövőbeli feladatok időigényét \parencite{SwEffortPrediction}.
+
+\paragraph{Erőforrás-allokáció optimalizálása.}
+Az erőforrás-allokációs problémák — például hogy melyik fejlesztők, melyik feladatokon, milyen sorrendben dolgozzanak — jól formalizálhatók optimalizációs problémaként.  
+A modern MI-eszközök prediktív modelleket alkalmaznak a csapatteljesítmény és a feladatbonyolultság elemzésére. Az ilyen döntéstámogató rendszerek alkalmasak a menedzsment folyamatok támogatására, hosszabb távon akár automatizálására is \parencite{ResourceAlloc}.
+
+\paragraph{Követelményellenőrzés.}
+Mivel a követelményekre épül később a teljes szoftverfejlesztési folyamat, kiemelt fontosságú, hogy precízen legyenek megfogalmazva. A természetesnyelv-feldolgozás (NLP) segítségével a szöveges követelmények is elemezhetők, és ellenőrizhető, hogy teljesítik-e a követelményekkel szemben támasztott általános elvárásokat, mint pl. egyértelműség, teljesség és ellentmondásmentesség \parencite{NLP4RE}.
+
+\paragraph{Architektúraelemzés.}
+A szoftverarchitektúra alapvetően meghatározza a rendszer hosszú távú karbantarthatóságát. Egyes MI-eszközök képesek a rendszer forráskódjából és függőségi gráfjából automatikusan következtetni bizonyos architekturális tulajdonságokra, mint például a rétegsértések, ciklikus függőségek, instabil komponensek vagy más úgynevezett \emph{architecture smell}-ek (hibára utaló mintázatok) jelenléte. Az ilyen eszközök statisztikai és gépi tanulási módszerekkel azonosítják a tipikus mintázatokat \parencite{ArchSmell}.
+
+\paragraph{Statikus kódanalízis.}
+A statikus kódanalízis célja, hogy a forráskódot futtatás nélkül vizsgálja, és azonosítsa a hibalehetőségeket, kódstílusbeli problémákat vagy biztonsági sebezhetőségeket.  
+A modern eszközök a hagyományos szintaktikai ellenőrzésen túl már gépi tanulási modelleket is használnak a hibák mintázatainak felismerésére. Az ilyen modellek korábbi hibajavítási adatokat használnak tanításhoz, és képesek a fejlesztői szokásokból tanulni \parencite{Amalfitano2023AISTestingTertiary}.
+
+\paragraph{Hibapredikció.}
+A hibapredikció célja annak előrejelzése, hogy egy adott kódrészletben vagy modulban mekkora a hibák megjelenésének valószínűsége.  
+Míg a statikus kódanalízis a kód állapotát vizsgálja, addig a hibapredikció időbeli adatokat (pl. commit history, fejlesztői aktivitás, hibajegyek) elemez, így képes megtalálni azokat a komponenseket, amelyek a jövőben nagyobb karbantartási kockázatot hordoznak \parencite{Yang2022BugPredictionSurvey}.
+
+\paragraph{Tesztadat-generálás.}
+Fontos különbséget tenni a kombinatorikus és a generatív megközelítések között: a nemgeneratív (kombinatorikus) modellek meglévő adatok vagy specifikációk alapján generálnak új bemeneteket — például keresési algoritmusok, genetikus optimalizáció vagy constraint-solver technikák segítségével \parencite{zhang2014automatic}.  
+Ezek a rendszerek nem „találnak ki” új tesztadatokat, hanem a lehetséges bemeneti tér lefedettségét optimalizálják, növelve a tesztelés hatékonyságát.
+
+\paragraph{Regressziósteszt-priorizálás.}
+A regressziós tesztelés során a szoftver új verzióinak ellenőrzése történik, hogy a módosítás nem rontotta el azt, ami eddig már működött. Ez nagyméretű rendszerek esetén rendkívül időigényes lehet.  
+A regressziós tesztprioritás célja, hogy a teszteket olyan sorrendben futtassa, amely minimalizálja az időráfordítást és maximalizálja a hibák korai detektálását. Erre azért van szükség, mert a tesztelésre rendelkezésre álló idő mindig kevesebb, mint az összes teszt teljes futási ideje \parencite{RegrTestPrio}.
+
+\paragraph{Anomáliafelismerés.}
+Az üzemeltetési és karbantartási szakaszban az anomáliafelismerés a normál működéstől eltérő viselkedés automatikus azonosítását jelenti, amire szintén használhatók MI-alapú megoldások. A rendszerlogok, teljesítménymutatók és hálózati forgalmi adatok alapján működő AIOps-rendszerek képesek proaktívan jelezni egy esetleges meghibásodást vagy teljesítményromlást \parencite{AnomalyDetectionAI}.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Nemgeneratív MI felhasználások és eszközök az SDLC fázisaiban}
+	\label{tab:nemgenai-sdlc-tools}
+	\begin{tabular}{p{3cm} p{5cm} p{6cm}}
+		\toprule
+		\textbf{SDLC fázis} & \textbf{Felhasználás típusa} & \textbf{Eszközök} \\
+		\midrule
+		
+		\textbf{Projekttervezés}
+		& Fejlesztési időtartam előrejelzése 
+		& Atlassian Forecast\tablefootnote{\url{https://marketplace.atlassian.com/vendors/1213598/forecast}} \\
+		& Erőforrás-allokáció optimalizálása 
+		& Monday AI\tablefootnote{\url{https://monday.com/}}, 
+		ClickUp Brain\tablefootnote{\url{https://clickup.com/brain}} \\
+		
+		\midrule
+		
+		\textbf{Elemzés} 
+		& Követelményellenőrzés 
+		& IBM Engineering Requirements Quality Assistant\tablefootnote{\url{https://www.ibm.com/docs/en/erqa}}, 
+		ScopeMaster Requirements Analyser\tablefootnote{\url{https://www.scopemaster.com/solutions/requirements-analyser/}} \\
+		
+		\midrule
+		
+		\textbf{Rendszertervezés} 
+		& Architektúraelemzés 
+		& Designite\tablefootnote{\url{https://www.designite-tools.com/}}, 
+		Embold\tablefootnote{\url{https://embold.io/}} \\
+		
+		\midrule
+		
+		\textbf{Fejlesztés} 
+		& Statikus kódanalízis 
+		& SonarQube\tablefootnote{\url{https://www.sonarsource.com/products/sonarqube/}} \\
+		& Hibapredikció 
+		& Bugspots\tablefootnote{\url{https://github.com/igrigorik/bugspots}} \\
+		
+		\midrule
+		
+		\textbf{Tesztelés} 
+		& Tesztadat-generálás 
+		& Microsoft PICT\tablefootnote{\url{https://github.com/microsoft/pict}}, 
+		Hexawise\tablefootnote{\url{https://hexawise.com/}} \\
+		& Regressziósteszt-priorizálás 
+		&Leapwork\tablefootnote{\url{https://www.leapwork.com/}} \\
+		
+		\midrule
+		
+		\textbf{Karbantartás} 
+		& Anomáliafelismerés 
+		& Datadog Watchdog\tablefootnote{\url{https://www.datadoghq.com/product/platform/watchdog/}}, 
+		Dynatrace Davis AI\tablefootnote{\url{https://www.dynatrace.com/platform/artificial-intelligence/}} \\
+		
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\subsection{Generatív mesterséges intelligencia a szoftverfejlesztésben}\label{subsec:genai-dev}
+
+A nemgeneratív és a generatív mesterséges intelligencia közti alapvető különbség a szoftverfejlesztésbeli felhasználásukban is tetten érhető: míg előbbi az emberek által előállított különféle artefaktumokat (dokumentum, programkód, konfiguráció stb.) elemzi, utóbbi már konkrétan előállítja ezeket. Vagyis a generatív mesterséges intelligencia – emberi utasítások (promptok) alapján – képes a szoftverfejlesztési folyamat során előállítandó kimenetek közvetlen létrehozására.
+
+A generatív MI modellek tehát tekinthetők emberi nyelven („emberi nyelvi interfészen”) irányítható fejlesztői asszisztenseknek. A kódolásban ez olyan, mint a páros programozás félig gépi megvalósítása, ahol az MI egy mindig elérhető és soha el nem fáradó „pair programmer” (jóllehet nem támogató, csak autonóm). Gyorsan képes ötleteket és megoldási javaslatokat adni, kódvázlatokat előállítani, meglévő kódokat elemezni, ugyanakkor nem tévedhetetlen, ezért emberi kontrollt igényel \parencite{LLMcodeHIL}.
+
+A 2020-as években megjelenő nagy nyelvi modellek (LLM) alapozták meg a generatív MI ezirányú felhasználását. Az óriási mennyiségű szövegen (így többek között programkódokon is) tanított modellek képesek kontextusba illő válaszokat adni – programozási kérdésekre is. Az általános LLM-ek mellett azonban megjelentek a célspecifikus modellek is, mint pl. a kifejezetten programkódokra finomhangolt megoldások, az ún. code LLM-ek. Ezeket a modelleket az általános szövegek mellett nagy mennyiségű forráskódon, dokumentáción, pull requesten és hibajegyen tanították. Ennek eredményeként a modellek megtanulják a programkódok tipikus mintázatait, a programozási nyelvek szintaktikai szabályaitól kezdve egészen a kódok magas szintű szerkezetéig \parencite{LLMdev}.
+
+\paragraph{Fejlesztői eszközök.}
+A generatív mesterséges intelligencia integrációja rohamosan terjed a fejlesztői eszközökben \parencite{Gartner_AICodeAssistants_2025}. Ennek egyik formája az \textit{integrált fejlesztői környezetekbe} (integrated development environment, IDE) épített kódolási asszisztens. Ezek az eszközök nemcsak egyszerű kódkiegészítést biztosítanak (mint már a nemgeneratív eszközök is), hanem egész sorokat, sőt, teljes függvényeket vagy osztályokat is legenerálnak. A modern eszközök képesek figyelembe venni a kód kontextusát is: átlátják a szerkesztett fájlt vagy akár a teljes projektet, és ennek megfelelő javaslatokat adnak.
+
+A másik jellemző eszköz a chat alapú fejlesztői asszisztens, amely lehetővé teszi, hogy a fejlesztő párbeszédet folytasson az MI modellel a kódról. Ez használható bonyolult függvények magyarázatára, alternatív megoldások keresésére, hibakeresésre. Az agentikus megközelítés ennél is tovább megy, azok a rendszerek már képesek közvetlenül végrehajtani a feladatokat (pl. kódot generálni, projektet refaktorálni, fordítani). %Ezek az eszközök különösen akkor hatékonyak, amikor egy már létező összetett logika vagy régi, rosszul dokumentált kódbázis felderítése és megértése a cél.
+
+\paragraph{Hallucináció.}
+A nyelvi modellek kapcsán fontos megemlíteni a \emph{hallucináció} problémáját, vagyis amikor a modell olyan választ állít elő, amely kontextusba illőnek és helyesnek tűnik, vagyis hihető, ugyanakkor mégis hibás.\footnote{Egyes szakértők felhívják a figyelmet, hogy a hallucináció elnevezés egy félrevezető eufemizmus, hiszen ez valójában az LLM-ek működésének a lényege. Amit hallucinációnak hívunk, az a gyakorlatban egyszerű tévedés \parencite{LLM-hallucinate-mistake}.} Ez egyaránt jelenthet egy téves tényadatot (pl. egy egyszerű matematikai számítás eredménye) vagy hivatkozást valamire, ami valójában nem létezik (pl. szolgáltatás, tudományos mű). A hallucináció a modellek jelenlegi tanítási és kiértékelési módszereiből ered, amelyek leegyszerűsítve a találgatást jutalmazzák a bizonytalanság beismerésével szemben \parencite{hallucinate}.
+
+\paragraph{Kontextus.}
+A modellek gyakorlati hasznosíthatósága szempontjából kulcskérdés a \emph{kontextus} mérete és kezelése. Minél komplexebb problématerekről van szó, annál inkább elengedhetetlen a modellek széles látóköre, pl. egy több ezer fájlból álló projekt esetén nagyon korlátosan használható egy olyan modell, amely csak az adott fájlt képes átlátni, hiszen egy közelről helyesnek tűnő megoldás lehet, hogy valójában több új problémát okoz, mint ahányat megold.
+
+A kontextus tágítása azonban nemcsak mennyiségi kérdés. Nagyvállalati környezetben azok a tudáselemek, amelyek egy probléma megoldásához szükségesek, gyakran nem egy helyen és azonos formában állnak rendelkezésre, hanem széttöredezetten. Vagyis pl. egyaránt kellene értelmezni különféle szoftver projekteket, hibajegyeket, dokumentumokat, adatbázisokat és tudásmegosztó oldalakat \parencite{LLMknowledge}.
+
+Ahhoz tehát, hogy nagyvállalati környezetben is hatékonyan tudjuk használni a generatív MI-t, kulcsfontosságú az MI és a vállalati rendszerek mély integrációja. Fontos látni, hogy ez az integráció kétirányú tudásmegosztást feltételez, és mindkét irány számos kihívást és kockázatot hordoz. Egyrészt a vállalati rendszerekben felhalmozott tudást az MI modell számára hozzáférhetővé kell tenni, hogy az képes legyen beemelni azt a saját kontextusába. Másrészt a generatív MI modellek kimeneteit úgy kell integrálni a vállalati folyamatokba, hogy ezek a megoldások ne szigetszerű eszközökként jelenjenek meg a szervezeten belül, hanem a vállalati működés szerves, beágyazott elemeivé váljanak.
+
+\section{Iparági áttekintés}
+
+A szoftveripar a globális gazdaság egyik leggyorsabban növekvő és legnagyobb hatású ágazata. A digitális transzformáció évtizedeiben szinte minden iparág szoftvervezéreltté vált, ami drasztikusan megnövelte a szoftverfejlesztés iránti keresletet. Az iparági elemzések évek óta folyamatos, jelentős növekedést jeleznek a vállalati szoftverpiacon \parencite{GVR_2025_SoftwareMarket}. Ezen belül is külön említést érdemelnek a felhőalapú szolgáltatások, a SaaS (Software as a Service) modellek, a kibervédelem és az üzleti folyamatok digitalizációja. A szoftveripar a kezdetekben támogató funkciót töltött be, napjainkra azonban már számos szervezet alapvető versenyképességi tényezőjévé vált. Ezen szervezetek esetében a gyors fejlesztés, a megbízhatóság és a skálázhatóság közvetlenül teremtenek üzleti értéket.
+
+A nagyvállalati szoftverfejlesztés lényegesen eltér a kisebb projektek vagy startupok világától. Ezek a rendszerek gyakran több évtizedes múlttal, sokszor különböző generációk technológiáira épülve működnek tovább. A több millió soros monolitikus rendszerek, az üzletmenet szempontjából kritikus szoftverek (pl. core pénzügyi rendszerek, telekommunikációs platformok) és a heterogén infrastruktúrák mind növelik a komplexitást, amit emberi kapacitásokkal már egyre nehezebb teljes mértékben átlátni. A folyamatosan szaporodó compliance követelmények tovább bonyolítják a rendszereket, miközben a vállalatok változatlanul rövid fejlesztési ciklusokat és folyamatos innovációt várnak el. A rendszerek és komponenseik közötti erős kölcsönhatások miatt egy látszólag egyszerű változtatás is nagy kockázatokkal járhat, így gyakran a látszólag egyszerű fejlesztői döntések előtt sem hagyható ki az előbb felsorolt komplexitás áttekintése.
+
+A fenti tényezők mellett az iparágban kritikus kérdés a technikai adósság (technical debt) és az örökölt (legacy) rendszerek fenntartása is. Számos szervezet informatikai infrastruktúrájának jelentős része még mindig olyan technológiákon fut, amelyeket nehéz modernizálni, mert a kritikus belső folyamatok ezekre épülnek. A legacy rendszerek frissítése gyakran magas kockázattal jár, a dokumentáció nem teljes, a tudás pedig sokszor személyekhez kötött (tribal knowledge). A minőségbiztosítás, a tesztelés és a hibajavítás így a nagyvállalatok egyik legköltségesebb és legmunkaigényesebb tevékenységévé vált \parencite{legacy}.
+
+Mindez jól magyarázza, miért vált a generatív mesterséges intelligencia az iparág egyik legígéretesebb technológiájává. A rendszerek növekvő mérete, a tudás szétszórtsága és a dokumentáció hiánya olyan környezetet eredményez, ahol különösen nagy értéke van annak, ha egy modell képes nagy mennyiségű szöveget, kódot és információt egyszerre értelmezni. A generatív MI nem csupán végrehajtási automatizálást tesz lehetővé, hanem a várakozások szerint a fejlesztési folyamat szellemi terheit is képes csökkenteni: kódolási mintázatokat ismer fel, alternatív megoldásokat javasol, összefoglalja a kontextust, és segít átlátni a komplex rendszerek működését. Ez a képesség teszi relevánssá és stratégiai jelentőségűvé a generatív MI-t a nagyvállalati szoftverfejlesztésben, különösen olyan környezetekben, ahol a gyorsaság, a minőség és a szabályozási megfelelőség egyszerre kritikus elvárás.

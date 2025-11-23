@@ -102,5 +102,18 @@
     sorting=nyt,
 ]{biblatex}
 
+\DeclareFieldFormat{edition}{%
+	\ifinteger{#1}
+	{#1.\addspace kiad.}
+	{#1\addspace kiad.}}
+
+
 %\DeclareLanguageMapping{hungarian}{hungarian-apa}
 \addbibresource{bib/mybib.bib}
+
+\usepackage{tablefootnote}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+
