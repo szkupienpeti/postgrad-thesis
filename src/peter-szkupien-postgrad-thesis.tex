@@ -29,6 +29,7 @@
 % Beállítások magyar nyelvű dolgozathoz
 \input{include/thesis-hu}
 
+
 \input{include/preamble}
 
 % Table of contents and the main text
@@ -41,6 +42,8 @@
 %Titlepage
 \include{include/titlepage}
 
+\include{include/nyilatkozat}
+
 \pagenumbering{roman}
 
 % Table of Contents
@@ -48,6 +51,8 @@
 
 % List of Figures, Tables
 \listoffigures\addcontentsline{toc}{chapter}{\listfigurename}\cleardoublepage
+
+\listoftables\addcontentsline{toc}{chapter}{\listtablename}\cleardoublepage
 
 % The main part of the thesis
 \pagenumbering{arabic}

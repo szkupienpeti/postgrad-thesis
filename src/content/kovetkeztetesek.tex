@@ -1,79 +1,136 @@
 \chapter{Következtetések}\label{ch:kovetkeztetesek}
 
-kb. 5 oldal
+Ebben a fejezetben kutatási eredményeim összefoglalásául következtetéseket fogalmazok meg: az \ref{sec:kovetkeztetes-megiteles}. alfejezetben a generatív mesterséges intelligencia megítélését illetően, az \ref{sec:kovetkeztetes-szerep}. alfejezetben a technológia szerepéről és lehetséges felhasználásairól, az \ref{sec:kovetkeztetes-kihivasok}. alfejezetben a kapcsolódó kihívások és tapasztalatok vonatkozásában. Az \ref{sec:akciolista}. alfejezetben bemutatok egy akciólistát a generatív MI sikeres bevezetéséhez, végül az \ref{sec:kutmod-ertekeles}. alfejezetben értékelem az alkalmazott kutatásmódszertant.
 
-\section{A generatív mesterséges intelligencia megítélése}\label{sec:kutmod-ertekeles}
+\section{A generatív mesterséges intelligencia megítélése}\label{sec:kovetkeztetes-megiteles}
 
-mindenhez ért, de semmiben nem a legjobb, viszont nagyon kényelmes mindenre használni (még arra is, amire lenen jobb (pl. algoritmikus, biztosan helyes) céleszköz) -- akinek kalapács van a kezében, az mindent szögnek néz
+A kutatás során kirajzolódott kép alapján a szoftverfejlesztők a generatív mesterséges intelligenciára (GMI) alapvetően mint egy nagy tudású, univerzális, fáradhatatlan, ám korántsem tévedhetetlen asszisztensre tekintenek. A technológia megítélése kettős: miközben elismerik a benne rejlő kényelmet és potenciált, a szakemberek tisztán látják annak (jelenlegi) korlátait is.
 
-meglévő mintákon tanul --> nincs igazi out of the box thinking, igazi kreativitás
+\paragraph{Univerzális.} A GMI lett a modern szoftverfejlesztés kalapácsa: \textit{akinek kalapács van a kezében, az hajlamos mindent szögnek nézni} \parencite{maslow1966psychology}. Mivel a nagy nyelvi modellek univerzálisak és rendkívül kényelmesen használhatók természetes nyelven, a fejlesztők hajlamosak olyan feladatokra is ezt használni, amelyekre léteznek pontosabb, megbízhatóbb céleszközök. A GMI „mindenhez ért”, de speciális technikai feladatokban (pl. statikus kódanalízis, refaktorálás) gyakran elmarad a determinisztikus algoritmusok pontosságától. A gyakorlatban a kényelem azonban sokszor felülírja a racionalitást, ami kockázatot jelent.
 
-hallucináció
+\paragraph{Absztrahálás hiánya.} A megkérdezettek szerint a generatív MI jelenlegi formájában nem képes az emberi gondolkodás egyik legfontosabb elemére, az \textit{absztrahálásra}. Mivel a modellek a meglévő adatokon, a múltban keletkezett mintázatokon tanulnak, működésükből hiányzik a valódi kreativitás, az igazi „out of the box” gondolkodás. A szoftverfejlesztés lényege gyakran éppen az egyedi, korábban nem látott (üzleti) problémák leképezése absztrakt modellekre, amit a jelenlegi GMI eszközök önállóan nem tudnak elvégezni. Így pedig a szoftverfejlesztés legértékesebb és legfárasztóbb része, azaz a problémák \textit{megértése} és az \textit{„igazi” gondolkodás} továbbra sem spórolhatók meg.
 
-bullshitelés (igazi adatok elrejtése, hogy aztán egy másik AI-jal visszafejtsék, pedig nem pontos inverzek)
+\paragraph{Megbízhatóság.} A technológia megítélését negatívan befolyásolják a megbízhatósági problémák, különösen a hallucináció jelensége. A fejlesztők számára frusztráló, hogy az eszközök gyakran magabiztos stílusban közölnek teljesen téves információkat. Szintén negatív jelenségként értékelhető a tartalom felesleges felduzzasztása. Abszurd helyzeteket teremt, amikor az egyik MI modell által generált, információban ritka, de terjedelmes szöveget egy másik modellel kell összefoglaltatni a hatékony feldolgozáshoz. Ez rávilágít arra, hogy a technológia jelenleg a redundáns emberi kommunikációt utánozza, ahelyett, hogy a szoftverfejlesztésben elvárt precizitást és tömörséget célozná meg.
 
-nem féltik a munkájukat, szükség lesz rájuk (mindegy, hogy konkrétan szoftverfejlesztőnek hívjuk-e, de szükség lesz olyanra, aki valós problémákat digitális megoldásokra tud fordítani, mert ehhez mindkét világot ténylegesen érteni kell)
+\paragraph{Munkaerőpiac.} A munkaerőpiaci kilátásokat illetően a kutatás nem igazolta vissza a fejlesztők munkájának megszűnésével kapcsolatos félelmeket. A megkérdezettek nem féltik a munkájukat, sőt, egyetértés mutatkozik abban, hogy a jövőben is szükség lesz olyan szakemberekre, akik képesek a valós világ problémáit digitális megoldásokra fordítani. Ehhez ugyanis mindkét világ – az üzleti domain és a technológia – mélyreható ismerete szükséges. A következtetés szerint a szoftverfejlesztő munkakör átalakul, de nem szűnik meg: az MI nem kiváltja az embert, hanem a segítőjévé válik a mindennapi munkában.
 
-AI használat fontos, de nem váltja ki az embert. inkább társa/okos asszisztens
+\paragraph{Kilátások.} Végezetül megállapítható, hogy a technológia megítélése széles skálán mozog attól függően, hogy az egyén mennyire mélyedt el a használatában. Arról azonban ettől függetlenül majdhogynem egyetértés uralkodik, hogy a technológiát övező várakozások gyakran inkább a fantázia, semmint a tapasztalatok szüleményei.
 
-absztrahálás képessége (emberi gondolkodás sajátja)
+\section{A generatív mesterséges intelligencia szerepe}\label{sec:kovetkeztetes-szerep}
 
-igazi gondolkodás nem spórolható meg
+Kutatásom alapján a generatív mesterséges intelligencia a szoftverfejlesztési életciklus (SDLC) számos pontján képes értéket teremteni, azonban a jelenlegi felhasználás eloszlása egyenletlen. A GMI felhasználásának szempontjait az \ref{tab:szempontok}. táblázat tartalmazza.
 
-hype
+\begin{table}[htbp]
+	\centering
+	\caption{A GMI felhasználásának szempontjai. (Saját szerkesztés.)}
+	\label{tab:szempontok}
+	\begin{tabular}{p{3cm} p{5cm} p{5cm}}
+		\toprule
+		\textbf{Szempont} & \textbf{Pozitív} & \textbf{Negatív} \\
+		\midrule
+		\textbf{Felhasználási terület} & Fejlesztésben, tesztelésben hatékony segítség & Többi SDLC fázisba még nincs megfelelően integrálva\\
+		\midrule
+		\textbf{Hibatűrés} & Könnyen javítható dolgokra alkalmas & Kritikus feladatokra kockázatos \\
+		\midrule
+		\textbf{Felhasználási mód} & Ellenőrzésre kiváló & Generálás eredményét nehéz utóellenőrizni \\
+		\midrule
+		\textbf{Kezdeti tapasztalatok} & 5\% siker & 95\% kudarc \\
+		\bottomrule
+	\end{tabular}
+\end{table}
 
-\section{A generatív mesterséges intelligencia szerepe}\label{sec:kutmod-ertekeles}
+\paragraph{Felhasználási terület.} A legszembetűnőbb következtetés a kódolási és tesztelési fázisok túlreprezentáltsága. Mind a szakirodalmi áttekintés, mind a panelbeszélgetések tapasztalatai azt mutatják, hogy a fejlesztők és az eszközgyártók fókusza elsősorban a kódgenerálásra irányul. Itt áll rendelkezésre a legtöbb tapasztalat, ezzel szemben az SDLC többi fázisában inkább csak kísérletezés zajlik. Ez egyben rámutat egy kihasználatlan potenciálra is: a valódi hatékonyságnöveléshez a generatív MI-t a teljes életciklusban alkalmazni kellene, nem csak a fejlesztési idő kisebb részét kitevő kódolásban \parencite{gartner_ai_sdlc}.
 
-megengedhető hiba? mennyire kritikus a feladat?
+A \ref{ch:eredmenyek}. fejezetben bemutatott felhasználási lehetőségeket a \textit{Kísérletezés/Spekuláció}, \textit{Kezdeti tapasztalatok} és \textit{Aktív használat} kategóriákba soroltam, amit a \ref{tab:felhasznalasok}. táblázat tartalmaz. A besorolás nem reprezentatív (hiszen elsősorban a panelbeszélgetéseken alapul, mivel a szakirodalomban bemutatott lehetőségekről gyakran nem állapítható meg, mennyire tartoznak hozzájuk valós ipari felhasználások is), de ennek ellenére is jó áttekintést ad az eredményeimről.
 
-szoftverfejlesztésben jól használható
+\begin{table}[htbp]
+	\centering
+	\caption{A GMI használati lehetőségeinek besorolása SDLC fázisok és elterjedtség szerint. (Saját szerkesztés.)}
+	\label{tab:felhasznalasok}
+	\begin{tabular}{p{2.5cm} p{4.2cm} p{3.8cm} p{3cm}}
+		\toprule
+		\textbf{SDLC fázis} & \textbf{Kísérletezés\slash Spekuláció} & \textbf{Kezdeti\newline tapasztalatok} & \textbf{Aktív használat} \\
+		\midrule
+		\textbf{Projekt\-tervezés} & Helyzetfelmérés\newline Brainstorming\newline Értékelés\newline Kockázatelemzés & Dokumentum\-generálás\newline Becslés & \\
+		\midrule
+		\textbf{Elemzés} & Követelmény\-származtatás\newline Követelmény\-osztályozás\newline Követelményminőség\newline Megvalósíthatóság & & \\
+		\midrule
+		\textbf{Rendszer\-tervezés} & Tervezés & Technológia\-választás\newline Prototipizálás & \\
+		\midrule
+		\textbf{Fejlesztés} & & & Kódgenerálás\newline Megmagyarázás\newline Refaktorálás\newline Hibakeresés\newline Szkriptek\newline Konvertálás \\
+		\midrule
+		\textbf{Tesztelés} & Kimenetellenőrzés\newline Kompatibilitás\-ellenőrzés & Integrációs tesztelés & Tesztgenerálás\newline Tesztadat-generálás\newline Kódátvizsgálás \\
+		\midrule
+		\textbf{Bevezetés} & Infrastruktúrakód\newline Függőségelemzés\newline Végrehajtás & Dokumentáció & \\
+		\midrule
+		\textbf{Karbantartás} & Hibajegy-előfeldolgozás\newline Teljesítményelemzés & Hibaokfeltárás & Ügyféltámogatás \\
+		\bottomrule
+	\end{tabular}
+\end{table}
 
-AI létrehozás veszélyes, mert úgyse nézi át, akinek át kéne
+\paragraph{Hibatűrés.} A GMI szerepének meghatározásakor kulcskérdés a feladat kritikussága és a hibatűrés mértéke. A technológia kiválóan alkalmazható olyan területeken, ahol a hiba megengedhető, mert „olcsó” vagy könnyen javítható (pl. prototípus készítése, egy UI elem stílusának generálása), de kockázatos a kritikus rendszerek (pl. közlekedés, energetika, pénzügy) esetében. A következtetés az, hogy a GMI szerepe a kockázatmentes kísérletezés és a gyors prototipizálás területén a legjelentősebb, míg az éles, biztonságkritikus rendszerekben a szerepe korlátozottabb kell, hogy maradjon.
 
-de reviewra, kontextus magyarázatra, nem kritikus dolgokra hasznos és hatékony
+\paragraph{Felhasználási mód.} Kutatásom rávilágított egy fontos emberi aspektusra a tartalomlétrehozás kapcsán. Bár a GMI képes nagy mennyiségű kódot vagy dokumentációt generálni, az emberi természetből fakadó lustaság miatt fennáll a veszélye, hogy ezeket a kimeneteket a felelős személyek nem ellenőrzik megfelelő alapossággal. Ezzel szemben a technológia sokkal biztonságosabban használható az ellenkező irányban: ember által írt kódok vagy szövegek ellenőrzésére (review), kontextus magyarázatára vagy hibakeresésre. Ebben az esetben az MI „fáradhatatlan” figyelme kiegészíti az emberi kreativitást.
 
-kódolás túlreprezentáltság: 
+\paragraph{Kezdeti tapasztalatok.} Végezetül fontos következtetés, hogy a GMI vállalati integrációja jelenleg gyerekcipőben jár. Ahogy arra az MIT friss kutatása is rámutatott, a projektek jelentős része, akár 95\%-a kudarcot vall vagy nem hoz átütő sikert, mert a megoldások szigetszerűek maradnak \parencite{NANDA2025_GenAIDivide}. A technológia nem illeszkedik szervesen a meglévő vállalati folyamatokba, nem éri el a belső tudásbázisokat. Ez arra enged következtetni, hogy a GMI sikeres alkalmazása ma már nem elsősorban technológiai, hanem vezetési, szervezési és folyamatmenedzsment kihívás.
 
-MIT 95\%-ban kudarc: szigetszerűek
+\section{A generatív mesterséges intelligencia használatának kihívásai}\label{sec:kovetkeztetes-kihivasok}
 
-\section{A generatív mesterséges intelligencia használatának kihívásai}\label{sec:kutmod-ertekeles}
+A kutatási eredmények alapján a generatív MI szoftverfejlesztésbeli alkalmazását számos, nem tisztán technológiai kihívás nehezíti. Ezek a gátló tényezők gyakran erősebbnek bizonyulnak, mint maga a technológiai korlát. A GMI használatának főbb kihívásait az \ref{tab:kihivasok}. táblázat tartalmazza.
 
-jogi környezet
+\begin{table}[htbp]
+	\centering
+	\caption{A GMI használatának főbb kihívásai. (Saját szerkesztés.)}
+	\label{tab:kihivasok}
+	\begin{tabular}{p{2.2cm} p{3.5cm} p{3.7cm} p{3.5cm}}
+		\toprule
+		\textbf{Szint} & \textbf{Kihívás}                   & \textbf{Adottság}       & \textbf{Kulcsszavak}                   \\
+		\midrule
+		Ország         & Jogi környezet                     & Jogszabályok            & Törvény\newline Compliance                    \\
+		\midrule
+		Szervezet      & Vállalati környezet                & Belső szabályok         & Policy\newline Compliance                     \\
+		\midrule
+		Szervezet      & Tudásintegráció                    & Szervezeti tudás        & Heterogén\newline Fragmentált       \\
+		\midrule
+		Ember          & Emberi tényezők\newline és kompetenciák  & Személyes tudás         & Prompt engineering\newline Deskilling         \\
+		\midrule
+		Ember          & Pszichológiai csapda               & Emberi természet        & Utóellenőrzés\newline Unalom                  \\
+		\midrule
+		Technológia    & Műszaki korlátok\newline és költségek    & Technológiai fejlettség & Nemdeterminizmus\newline Hallucináció\newline Token \\
+		\bottomrule
+	\end{tabular}
+\end{table}
 
-vállalati környezet (adatbiztonság, biztonsági megoldások kiherélik a toolokat)
+\paragraph{Jogi és vállalati környezet.} A nagyvállalati környezetben a legfőbb akadályt a jogi bizonytalanság és az adatbiztonsági szigor jelenti. A cégek érthető módon védik szellemi tulajdonukat és ügyféladataikat, ami szélsőséges esetben ahhoz vezet, hogy a biztonsági megoldások gyakorlatilag kiüresítik az MI eszközöket, feláldozva a potenciális hatékonyságnövelést. A fejlesztők így sokszor nem a legmodernebb eszközökhöz férnek hozzá, vagy ha igen, akkor nem tudják azokat a releváns adatokkal és rendszerekkel használni.
 
-céges tudásbázis integrálás (JIRA, Confluence, kódok, DB-k)
+\paragraph{Tudásintegráció.} A GMI hatékony működésének feltétele a kontextus ismerete. Egy szoftverfejlesztési projekt tudásanyaga azonban széttöredezett: a követelmények és dokumentumok, a kód és az adatok mind más rendszerben vagy adatbázisban találhatók. Ezen heterogén források biztonságos és naprakész integrálása a nyelvi modellek kontextusába komoly architekturális kihívás, ám enélkül a modell csak általános válaszokat tud adni, nem pedig specifikus segítséget.
 
-elfogy a token
+\paragraph{Emberi tényezők és kompetenciák.} A technológia használata új kompetenciákat igényel, mint például a \textit{prompt engineering}. Ez nem csupán technikai tudás, hanem egy újfajta kommunikációs készség, amelyet tanulni kell. A szervezeteknek időt és teret kell biztosítaniuk ennek elsajátítására. Ugyanakkor felmerül az „elbutulás” (deskilling) kockázata is: ha a fejlesztők túlságosan hozzászoknak az MI segítségéhez, elveszíthetik rutinjukat az alapszintű problémamegoldásban, és előfordulhat, hogy MI támogatás nélkül már nem lesznek képesek hatékonyan dolgozni \parencite{CopilotingFuture}.
 
-túlságosan hozzászokunk (elbutulás)
+\paragraph{Pszichológiai csapda.} A szoftverfejlesztésben az MI ígérete az, hogy átveszi az unalmas, repetitív munkát. Ezzel azonban egy új, még unalmasabb feladatot teremt: a generált kimenetek átnézését és validálását. Az emberi természetből fakadóan a monoton ellenőrzési feladatok során lankad a figyelem. Ez a helyzet veszélyes hibákhoz vezethet: a fejlesztők hajlamosak átsiklani olyan MI által generált hibák felett, amelyeket ők maguk talán el sem követtek volna, vagy saját kódolás közben azonnal észrevettek volna.
 
-unalmas munka elvégzése helyett unalmas átnézni az AI outputot --> emberi természet, luistaság --> át se nézzük igazán --> veszély (vannak hibák, amiekt elkövetni nem követünk el, de mégsem vesszük észre)
-
-Vince: LLM válasz validálása: ehhez szükséges a tudás formalizálása --> kihívás: emberiség tudását formalizálni (ontológia?)
+\paragraph{Műszaki korlátok és költségek.} A modellek használata nem ingyenes; a tokenek (számítási egységek) fogyása közvetlen költséget jelent, melyet menedzselni kell. Emellett technikai kihívást jelent a reprodukálhatóság hiánya: a nemdeterminisztikus modellek ugyanarra a bemenetre eltérő kimenetet adhatnak, ami megnehezíti a tesztelést és a validálást \parencite{LLMthreats}. A hallucináció kiküszöbölésére megoldást jelenthetne az LLM válaszok automatizált validálása, ehhez azonban szükség lenne a validálandó tudás formalizálására, hiszen jelenleg a tudás természetes nyelven áll rendelkezésre, nem pedig matematikai formalizmusok által leírva.
 
 \section{Akciólista a generatív mesterséges intelligencia bevezetéséhez}\label{sec:akciolista}
 
-jogi környezet tisztázása: mit lehet?
+A kutatási eredmények és a feltárt kihívások alapján az alábbi lépésekből álló akciótervet javaslom a technológia sikeres szervezeti bevezetéséhez:
 
-mérhető keretrendszer: ROI, usage, tokenek, költségek
-
-céges tudásbázis integrálása (kockázatok felmérése)
-
-rendszeres dolgozók közti tudásmegosztás, dedikált idő a tanulásra, kísérletezésre
+\begin{enumerate}
+	\item \textbf{Jogi és szabályozási környezet tisztázása.} Az első és legfontosabb lépés egy világos, mindenki számára elérhető szabályrendszer megalkotása. A fejlesztőknek tudniuk kell, mely eszközöket használhatják, milyen adatokat oszthatnak meg ezekkel, és hol húzódnak a tilalmak határai. A bizonytalanság megszüntetése kulcsfontosságú a technológia használatának széleskörű elterjedéséhez.
+	
+	\item \textbf{Mérhető keretrendszer kialakítása.} A bevezetés sikerességének nyomon követéséhez mérőszámokra van szükség. Definiálni kell, mit tekintünk sikernek (pl. fejlesztési ciklusidő csökkenése, hibák számának csökkenése), és mérni kell a ráfordításokat is (pl. licenszköltségek, tokenhasználat). A megtérülés (return of investment, ROI) nyomon követése segíti a tisztánlátást, és alapot ad a technológia skálázását illető döntések előkészítéséhez.
+	
+	\item \textbf{Vállalati tudásbázis integrálása.} A valódi hatékonyságnöveléshez meg kell teremteni a technikai feltételeit annak, hogy az MI modellek (biztonságos keretek között) hozzáférjenek a vállalat belső tudásanyagához (dokumentumok, forráskódok, adatbázisok). Enélkül az eszközök csak általános tudásúak lesznek, de nem válnak specifikus szakértőkké.
+	
+	\item \textbf{Kultúra és tudásmegosztás.} A technológia bevezetése nem ér véget a licenszek megvásárlásával. Támogatni kell a belső tudásmegosztást (pl. rendszeres fórumok, legjobb gyakorlatok (best practice) megosztása), és dedikált időt kell biztosítani a kísérletezésre. A fejlesztők érdeklődésének felkeltése és fenntartása kulcsfontosságú a sikeres adoptációhoz \parencite{BCGgenAISW}.
+\end{enumerate}
 
 \section{Kutatásmódszertan értékelése}\label{sec:kutmod-ertekeles}
 
-újrafelhasználható módszer a céges AI használat/gondolkodás felmérésére
+Kutatásom lezárásaként érdemes értékelni az alkalmazott módszertant is, amely újrafelhasználható a generatív mesterséges intelligenciával kapcsolatos szervezeti vélemények és szoftverfejlesztésbeli tapasztalatok strukturált vizsgálatára. Az SDLC fázisaira épülő struktúra megfelelőnek bizonyult: segített a szerteágazó téma rendszerezésében, és mankót adott a panelbeszélgetések résztvevőinek is a gondolkodáshoz.
 
-SDLC jó keretrendszer
+A panelbeszélgetések résztvevőinek száma megfelelő volt, eltérő tapasztalati szintjük hasznosnak bizonyult, de szerencsés lett volna, ha nemcsak fejlesztőket sikerült volna megszólaltatni, hanem a szoftverfejlesztéshez kapcsolódó más munkakörök képviselőit is. A résztvevők közötti interakciók olyan szempontokat is felszínre hoztak, amelyek egyéni interjúk során rejtve maradtak volna. Tapasztalatom szerint a fejlesztők szívesen beszélnek a témáról, az eredetileg tervezett 60 perces időkeret szűkösnek is bizonyult, a 90 perc azonban már elegendő volt a mélyebb szakmai viták kibontakozásához is. 
 
-diverz csapatok (tapasztalat, beosztás, cégnél töltött évek, cégen belül min dolgoznak)
+Az ötletek SDLC fázisok szerinti rendszerezését követően eredetileg terveztem egy olyan kört is, amikor az ötleteket aszerint értékeljük, hogy a résztvevők szerint azokat milyen mértékben lehet az MI-re bízni, amihez a \textit{human only}, \textit{AI in the loop}, \textit{human in the loop}, \textit{AI only} osztályozást terveztem használni. Az első panelbeszélgetésen kipróbáltam ezt, azonban nem váltotta be a hozzá fűzött reményeket: az derült ki, hogy az eredeti felhasználási ötleteket szinte minden esetben tovább lehet bontani még kisebb részekre, ami megnehezíti az eredeti ötletek osztályozását (hiszen a különböző alrészek eltérő osztályokba esnének). Ezért ezt a részt a második panelbeszélgetésen már el is hagytam, és a dolgozatban sem szerepeltettem.
 
-szeretnek ilyenekről beszélgetni az emberek
-
-AI only, ..., human only besorolás nem működött
-
-panel létszám OK, 1 óra kevés, 1,5 óra OK
-
-nem reprezentatív
+A kutatás legfőbb korlátja a reprezentativitás hiánya. Bár a feltárt trendek és dilemmák \textit{vélhetően} iparági szinten is érvényesek, a következtetések mégsem általánosíthatók, ehhez további, nagyobb mintán elvégzett kutatásokra lenne szükség. A kidolgozott módszertan -- a strukturált SDLC alapú panelbeszélgetés -- ugyanakkor egy könnyen adaptálható, újrafelhasználható eszköz, amellyel bármely szoftverfejlesztő szervezet hatékonyan felmérheti saját érettségét és viszonyulását a generatív mesterséges intelligenciához.
